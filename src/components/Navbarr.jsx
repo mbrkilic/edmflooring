@@ -28,21 +28,21 @@ function Navbarr() {
         </p>
       </div>
       <div className="container mx-auto flex justify-between items-center py-4 px-6 md:px-20 lg:px-32 bg-transparent">
-        <Link to="/" className="flex items-center">
+        <a href="/" className="flex items-center">
           <img src={assets.logoWhite} alt="" width={"80px"} />
           <p className="font-bold text-2xl text-white">EDM Flooring</p>
-        </Link>
+        </a>
 
         <div className=" items-center gap-3 hidden lg:flex">
           <ul className="capitalize flex space-x-6 text-lg mr-auto mt-2 text-gray-400 font-semibold">
             <li className="cursor-pointer hover:underline">
-              <Link to="/">home</Link>
+              <a href="/">home</a>
             </li>
             <li className="cursor-pointer hover:underline">
-              <Link to="/galery">galeri</Link>
+              <a href="/galery">galeri</a>
             </li>
             <li className="cursor-pointer hover:underline">
-              <Link to="/contact">contact</Link>
+              <a href="/contact">contact</a>
             </li>
           </ul>
         </div>
@@ -57,13 +57,13 @@ function Navbarr() {
           <div  className="bg-[#f5f6fb] mt-4 absolute left-0 right-0 top-[50px] flex justify-center items-center ">
             <ul className="flex flex-col lg:flex-row text-lg font-semibold capitalize my-6 mx-auto">
               <li className="cursor-pointer hover:underline">
-                <Link to="/">home</Link>
+                <a href="/">home</a>
               </li>
               <li className="cursor-pointer hover:underline">
-                <Link to="/galery">galeri</Link>
+                <a href="/galery">galeri</a>
               </li>
               <li className="cursor-pointer hover:underline">
-                <Link to="/contact">contact</Link>
+                <a href="/contact">contact</a>
               </li>
             </ul>
           </div>
