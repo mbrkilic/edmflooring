@@ -34,7 +34,7 @@ function Navbarr() {
         </Link>
 
         <div className=" items-center gap-3 hidden lg:flex">
-          <ul className="capitalize flex space-x-6 text-lg mr-auto mt-2 text-white font-semibold">
+          <ul className="capitalize flex space-x-6 text-lg mr-auto mt-2 text-gray-400 font-semibold">
             <li className="cursor-pointer hover:underline">
               <Link to="/">home</Link>
             </li>

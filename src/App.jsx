@@ -10,20 +10,23 @@ function App() {
   return (
     <div className="w-full overflow-hidden">
      {/* <Navbar />*/}
-      <Navbarr/>
+      
       {/* <Header /> */}
       {/* <About />*/}
       {/* <Projects />*/}
       {/* <Galeri />*/}
       {/*<Gallery/> */}
       {/*<Cards />*/}
-      <Router>
+      <Navbarr/>
+      
         <Routes>
+          
           <Route path="/" element={<HomePage />} />
           <Route path="/galery" element={<Galleri />} />
           <Route path="/contact" element={<Contact />} />
+          
         </Routes>
-      </Router>
+      
       <Footer />
     </div>
   );
