@@ -2,6 +2,7 @@ import { useState } from "react";
 import { HiMenu } from "react-icons/hi";
 import clock from "../assets/clock.svg";
 import { assets } from "../assets/assets";
+import { Link } from "react-router-dom";
 
 function Navbarr() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,21 +28,21 @@ function Navbarr() {
         </p>
       </div>
       <div className="container mx-auto flex justify-between items-center py-4 px-6 md:px-20 lg:px-32 bg-transparent">
-        <a href="/" className="flex items-center">
+        <Link to="/" className="flex items-center">
           <img src={assets.logoWhite} alt="" width={"80px"} />
           <p className="font-bold text-2xl text-white">EDM Flooring</p>
-        </a>
+        </Link>
 
         <div className=" items-center gap-3 hidden lg:flex">
           <ul className="capitalize flex space-x-6 text-lg mr-auto mt-2 text-white font-semibold">
             <li className="cursor-pointer hover:underline">
-              <a href="/">home</a>
+              <Link to="/">home</Link>
             </li>
             <li className="cursor-pointer hover:underline">
-              <a href="/galery">galeri</a>
+              <Link to="/galery">galeri</Link>
             </li>
             <li className="cursor-pointer hover:underline">
-              <a href="/contact">contact</a>
+              <Link to="/contact">contact</Link>
             </li>
           </ul>
         </div>
