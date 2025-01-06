@@ -18,7 +18,7 @@ function App() {
       {/*<Gallery/> */}
       {/*<Cards />*/}
       <Navbarr/>
-      
+      <Router basename="/">
         <Routes>
           
           <Route path="/" element={<HomePage />} />
@@ -26,7 +26,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           
         </Routes>
-      
+        </Router>
       <Footer />
     </div>
   );
