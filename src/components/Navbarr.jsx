@@ -57,13 +57,13 @@ function Navbarr() {
           <div  className="bg-[#f5f6fb] mt-4 absolute left-0 right-0 top-[50px] flex justify-center items-center ">
             <ul className="flex flex-col lg:flex-row text-lg font-semibold capitalize my-6 mx-auto">
               <li className="cursor-pointer hover:underline">
-                <a href="/">home</a>
+                <Link to="/">home</Link>
               </li>
               <li className="cursor-pointer hover:underline">
-                <a href="/galery">galeri</a>
+                <Link to="/galery">galeri</Link>
               </li>
               <li className="cursor-pointer hover:underline">
-                <a href="/contact">contact</a>
+                <Link to="/contact">contact</Link>
               </li>
             </ul>
           </div>
