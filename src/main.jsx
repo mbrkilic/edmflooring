@@ -6,8 +6,8 @@ import { ToastContainer } from 'react-toastify/unstyled'
 import { BrowserRouter } from 'react-router-dom'
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <>
     <App />
     <ToastContainer/>
-  </BrowserRouter>,
+  </>,
 )
