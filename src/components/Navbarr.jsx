@@ -5,7 +5,6 @@ import { assets } from "../assets/assets";
 import { Link, useLocation } from "react-router-dom";
 
 function Navbarr() {
-
   const location = useLocation();
   const isHomePage = location.pathname === "/";
 
@@ -14,7 +13,6 @@ function Navbarr() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
 
   return (
     <div className="absolute top-0 left-0 w-full z-10">
@@ -32,16 +30,22 @@ function Navbarr() {
           mdburakkilic@gmail.com
         </p>
       </div>
-      <div className={`container mx-auto flex justify-between items-center py-4 px-6 md:px-20 lg:px-32 ${ isHomePage
-          ? "bg-transparent"
-          : "bg-black sm:bg-transparent backdrop-blur-md" }`}>
+      <div
+        className={`container mx-auto flex justify-between items-center py-4 px-6 md:px-20 lg:px-32 ${
+          isHomePage
+            ? "bg-transparent"
+            : "sm:bg-transparent backdrop-blur-md"
+        }`}
+      >
         <Link to="/" className="flex items-center">
-          <img src={assets.logoWhite} alt="" width={"80px"} />
-          <p className="font-bold text-2xl text-white">EDM Flooring</p>
+          <img src={` ${isHomePage ? assets.logoWhite : assets.logo}`} alt="" width={"80px"} />
+          <p className={`font-bold text-2xl ${isHomePage ? "text-white" : "text-black"}`}>EDM Flooring</p>
         </Link>
 
         <div className=" items-center gap-3 hidden lg:flex">
-          <ul className="capitalize flex space-x-6 text-lg mr-auto mt-2 text-black font-semibold">
+          <ul className={`capitalize flex space-x-6 text-lg mr-auto mt-2 font-semibold ${
+          isHomePage ? "text-white" : "text-black"
+        } `}>
             <li className="cursor-pointer hover:underline">
               <Link to="/">home</Link>
             </li>
@@ -56,18 +60,22 @@ function Navbarr() {
 
         <button
           onClick={toggleMenu}
-          className="lg:hidden text-3xl justify-center items-center cursor-pointer text-white"
+          className={`lg:hidden text-3xl justify-center items-center cursor-pointer ${
+          isHomePage ? "text-white" : "text-black"
+        }`}
         >
           <HiMenu />
         </button>
-        {isMenuOpen && (
-          <div  className="bg-[#f5f6fb] mt-4 absolute left-0 right-0 top-[50px] flex justify-center items-center">
+        {isMenuOpen  && (
+          <div className="bg-white mt-11 absolute left-0 right-0 top-[50px] flex justify-center items-center">
             <ul className="flex flex-col lg:flex-row text-lg font-semibold capitalize my-6 mx-auto">
               <li className="cursor-pointer hover:underline">
                 <Link to="/">home</Link>
               </li>
               <li className="cursor-pointer hover:underline">
-                <Link to="/galery">galeri</Link>
+                <Link to="/galery" className="inline-block">
+                  galeri
+                </Link>
               </li>
               <li className="cursor-pointer hover:underline">
                 <Link to="/contact">contact</Link>
