@@ -22,8 +22,9 @@ function App() {
         <Routes>
           
           <Route path="/" element={<HomePage />} />
-          <Route path="/galery" element={<Galleri />} />
+          <Route path="/gallery" element={<Galleri />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*"/>
           
         </Routes>
       

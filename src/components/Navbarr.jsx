@@ -14,6 +14,10 @@ function Navbarr() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleMenuItemClick = () => {
+    setIsMenuOpen(false); // Menü öğesine tıklandığında menüyü kapat
+  };
+
   return (
     <div className="absolute top-0 left-0 w-full z-10">
       <div className="flex items-center justify-evenly bg-[#f2f2f2] text-gray-500 p-4 gap-2 flex-col sm:flex-row">
@@ -23,18 +27,18 @@ function Navbarr() {
         </p>
         <p className="flex text-xs sm:text-sm items-center sm:flex-wrap">
           <img src={assets.phone} alt="" className="w-4 sm:w-6 mr-2" />
-          +905457682493
+          +90 555 555 55 55
         </p>
         <p className="flex text-xs sm:text-sm items-center sm:flex-wrap">
           <img src={assets.mail} alt="" className="w-4 sm:w-6 mr-2" />
-          mdburakkilic@gmail.com
+          ornek@email.com
         </p>
       </div>
       <div
         className={`container mx-auto flex justify-between items-center py-4 px-6 md:px-20 lg:px-32 ${
           isHomePage
             ? "bg-transparent"
-            : "sm:bg-transparent backdrop-blur-md"
+            : "sm:bg-transparent"
         }`}
       >
         <Link to="/" className="flex items-center">
@@ -50,7 +54,7 @@ function Navbarr() {
               <Link to="/">home</Link>
             </li>
             <li className="cursor-pointer hover:underline">
-              <Link to="/galery">galeri</Link>
+              <Link to="/gallery">gallery</Link>
             </li>
             <li className="cursor-pointer hover:underline">
               <Link to="/contact">contact</Link>
@@ -69,15 +73,15 @@ function Navbarr() {
         {isMenuOpen  && (
           <div className="bg-white mt-11 absolute left-0 right-0 top-[50px] flex justify-center items-center">
             <ul className="flex flex-col lg:flex-row text-lg font-semibold capitalize my-6 mx-auto">
-              <li className="cursor-pointer hover:underline">
+              <li onClick={handleMenuItemClick} className="cursor-pointer hover:underline">
                 <Link to="/">home</Link>
               </li>
-              <li className="cursor-pointer hover:underline">
-                <Link to="/galery" className="inline-block">
-                  galeri
+              <li onClick={handleMenuItemClick} className="cursor-pointer hover:underline">
+                <Link to="/gallery" className="inline-block">
+                  gallery
                 </Link>
               </li>
-              <li className="cursor-pointer hover:underline">
+              <li onClick={handleMenuItemClick} className="cursor-pointer hover:underline">
                 <Link to="/contact">contact</Link>
               </li>
             </ul>
